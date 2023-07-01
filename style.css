@@ -1,0 +1,208 @@
+:root {
+    --branco-primaria: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --azul-botao: #167BF7;
+    --cor-de-fundo: #00030C;
+    --cor-do-texto: #F9F9F9;
+    --fonte-principal: "inter";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body { 
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-primaria);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.principal {
+    /* usamos o background-image por questões decorativas ao invés de usar a tag <img> no HTML */
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat; /* usamos isso para a foto do backgrund não se repetir */
+    background-size: contain; /* usamos isso para deixar a imagem do background fixa na tela */
+    text-align: center;
+    align-items: center;
+}
+
+.container__caixa {
+    margin: 0 6rem;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--azul-botao);
+    border-radius: 7px;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--branco-primaria);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700px;
+}
+
+.container__imagem {
+    margin: 1rem 0 2rem 0; /*1rem=margem top; 0rem=margem right; 2rem= margem baixo; 0=esquerdo*/
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10rem;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 0.2rem;
+}
+
+.descricao__texto {
+    font-size: 16px;
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.dispositivos {
+    align-items: center;
+}
+
+.container__descricao {
+    padding: 1rem
+}
+
+.dispositivos__lista {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.lista__item {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.rodape__lista {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+
+.lista__link a{
+    color: var(--branco-primaria);
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5rem 3rem;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin-top: 1rem 0;
+    margin: 1rem;
+}
+
+.rodape__logo {
+    margin-top: 4rem;
+}
+
+.lista__link a:hover {
+    color: var(--azul-botao);
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+        background-image: none;
+    }
+
+    .container__imagem {
+        width: 50vw;
+    }
+
+    .container__caixa {
+        margin: 2rem 2rem;/*quando colocamos apenas dois valores, significa que colocamos margem em cima, baixo, esquerda e direita.*/
+    }
+
+
+    .container__descricao {
+        display: inline-block;
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+
+    .secundario__imagem {
+        width: 50vw;
+    }
+
+    .imagem__notebook {
+        width: 80vw;
+    }
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .rodape__lista {
+        display: block;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .rodape__logo {
+        margin-left: 1rem;
+    }
+}
